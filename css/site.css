@@ -1,0 +1,487 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(90deg, #74D7BB, #53C8B6, #35A99C);
+    background-color: transparent;
+    padding: 1vw 16vw; /* Added padding for better spacing */
+    z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+.logo {
+    padding: 0;
+}
+
+    .logo .logo-heading {
+        color: #fff;
+        margin: 0;  /*Remove default margin*/ 
+        font-size: 24px;  /*Adjust as needed */
+    }
+
+.menu {
+    padding: 0;
+}
+
+.hamburger {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cross-icon {
+    display: none;
+}
+
+.menu .menu-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 20rem;
+}
+
+.menu-list .menu-list-items {
+    padding: 0.5rem 1rem;
+}
+
+    .menu-list .menu-list-items .links {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;  /*Adjust as needed*/ 
+    }
+
+        .menu-list .menu-list-items .links:hover {
+            color: #007bff;  /*Adjust as needed */
+        }
+
+@media screen and (max-width: 855px) {
+    .menu {
+        display: none;  /*Hide menu on small screens */
+    }
+
+    .hamburger {
+        display: block;  /*Show hamburger icon on small screens*/ 
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;  /*Adjust padding for small screens */
+    }
+}
+
+@media screen and (min-width: 856px) and (max-width: 1024px) {
+    .menu-list .menu-list-items {
+        padding: 0.5rem 0.3rem;
+    }
+}
+
+
+/* Main Hero Section Styles */
+.hero {
+    background-image: url('../Images/man-typing.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 4.8rem 0;
+}
+
+    .hero .intro {
+        text-align: center;
+        margin: 0 -12vw;
+        padding-bottom: 500px; /* Push upwards by adding padding */
+        padding-left: 20rem;
+    }
+
+
+@media screen and (max-width: 1024px) {
+
+    .hero {
+        justify-content: flex-start; /* Align content to the start */
+        align-items: flex-start; /* Align items to the top */
+        padding: 0 10px; /* Add some padding to prevent overflow */
+        position: relative; /* Position hero relative to allow absolute positioning of intro */
+    }
+
+        .hero .intro {
+            position: absolute; /* Allow free positioning */
+            top: 20px; /* Move the intro to the top */
+            right: 40px; /* Move the intro to the right */
+            text-align: right; /* Align text to the right */
+            margin: 0; /* Reset margin */
+            padding: 0; /* Reset padding for clean alignment */
+            max-width: 400px; /* Control the width of the intro text */
+        }
+
+    .greet-heading {
+        font-size: 1.8rem; /* Adjust font size for better readability */
+    }
+
+    .my-heading {
+        font-size: 2.5rem; /* Maintain font size or slightly reduce */
+    }
+
+    .sub-heading {
+        font-size: 1rem; /* Slightly increase for better visibility */
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 576px) {
+
+    .hero {
+        background-image: none; /* Remove the background image */
+        margin-bottom: 150px; /* Adjust margin */
+    }
+
+        .hero .intro {
+            text-align: center; /* Center text for small screens */
+            max-width: 90%; /* Limit width for readability */
+            margin-left: auto; /* Center the intro */
+            margin-right: auto; /* Center the intro */
+            padding-left: 0;
+        }
+
+    .greet-heading {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .my-heading {
+        font-size: 2.5rem; /* Smaller font size */
+    }
+
+    .sub-heading {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+}
+
+/* About section styles */
+.about {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(45deg, #363D73, #2794B3);
+    justify-content: space-between;
+    width: 100%;
+}
+
+    .about .about-text {
+        width: 450px;
+        color: #fff;
+        padding: 5rem 1rem 5rem 5rem;
+    }
+
+    .about .about-image img {
+        height: 600px;
+        width: 650px;
+        padding: 5rem 5rem 5rem 1rem;
+    }
+
+/* Portfolio section styles */
+.portfolio {
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+}
+
+.port-card {
+    padding: 0 !important;
+    background: none !important;
+    border: 2px solid #000;
+}
+
+    .port-card .image {
+        width: 100%;
+    }
+
+        .port-card .image img {
+            height: 200px;
+            width: 100%;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+
+/* Services section styles */
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+}
+
+.my-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+    .my-row .my-col {
+        text-align: center;
+        width: 30%;
+    }
+
+.my-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C);
+    padding: 1rem;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #363D73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .icon svg {
+        font-size: 30px;
+        color: #fff;
+    }
+
+/* Contact section styles */
+.contact {
+    padding: 3rem;
+    text-align: center; /* Center align text in the contact section */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.contact-heading,
+.contact-text {
+    text-align: center; /* Center align text */
+}
+
+.contact-heading {
+    margin-bottom: 1rem; /* Add margin below the Contact Me heading */
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    margin: 3rem 0;
+}
+
+.contact-details {
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Set a max width to keep it neat */
+    margin: 0 auto; /* Center the contact details */
+}
+
+/* Responsive adjustments for smaller devices */
+@media screen and (max-width: 576px) {
+    .contact {
+        padding: 1rem; /* Reduce padding on small screens */
+    }
+
+    .contact-details {
+        width: 90%; /* Adjust width for small screens */
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer-list-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 50%;
+    background-color: #53C8B6;
+}
+
+.footer-links {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-menu {
+    padding: 0 5rem;
+}
+
+    .footer-menu .footer-menu-list {
+        display: flex;
+        list-style: none;
+    }
+
+/* Utility Classes */
+.greet-heading {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.my-heading {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.sub-heading {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #ccc;
+    font-weight: lighter;
+}
+
+.links:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.links {
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+
+/* Media query for tablets and smaller devices */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjust navbar padding for smaller screens */
+    }
+
+    .hero {
+        justify-content: center; /* Center the hero content */
+        padding: 0 10px; /* Add some padding to prevent overflow */
+    }
+
+        .hero .intro {
+            text-align: center; /* Center text for smaller screens */
+            margin: 0; /* Reset margin for better alignment */
+            padding: 0; /* Reset padding for better fit */
+        }
+
+    .about, .services {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+        padding: 1rem; /* Add padding */
+    }
+
+        .about .about-text, .about .about-image img {
+            width: 90%; /* Make content responsive */
+            padding: 0; /* Reset padding */
+        }
+
+    .my-row {
+        flex-direction: column; /* Stack services vertically */
+        align-items: center; /* Center align */
+        width: 100%; /* Full width */
+    }
+
+        .my-row .my-col {
+            width: 100%; /* Full width for each column */
+            margin: 10px 0; /* Add margin for spacing */
+        }
+
+    .contact {
+        padding: 1rem; /* Adjust padding for the contact section */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align */
+    }
+
+    .contact-details {
+        width: 90%; /* Adjust width for small screens */
+        max-width: 300px; /* Set a max width for better readability */
+    }
+
+    .footer-menu {
+        padding: 1rem; /* Adjust footer padding */
+    }
+
+    .footer-list-items {
+        margin: 0; /* Reset margin */
+    }
+}
+
+/* Media query for smaller mobile devices */
+@media screen and (max-width: 576px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align to the left */
+        padding: 0; /* Reset padding */
+    }
+
+    .menu-list .menu-list-items {
+        padding: 0.5rem 0; /* Space between items */
+    }
+
+    .hero {
+        height: auto; /* Allow hero section to be flexible */
+        padding: 20px; /* Add padding for better appearance */
+    }
+
+        .hero .intro {
+            padding: 20px; /* Add padding for better fit */
+            text-align: center; /* Center text */
+        }
+
+    .about, .portfolio, .services, .contact {
+        padding: 1rem; /* Uniform padding */
+        width: 100%; /* Full width */
+    }
+
+        .about .about-text, .about .about-image img {
+            width: 100%; /* Full width */
+        }
+
+    .my-row .my-col {
+        width: 100%; /* Full width for columns */
+        margin: 10px 0; /* Margin for spacing */
+    }
+}
